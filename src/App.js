@@ -16,7 +16,7 @@ function App() {
   const [posts, setposts] = useState([])
   
   const getGifdata = useCallback( async() => {
-    const request = `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${APP_KEY}&limit=10`;
+    const request = `https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${APP_KEY}&limit=10`;
     fetch(request)
     .then(res => res.json())
       .then((data) => {
